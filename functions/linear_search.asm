@@ -8,7 +8,6 @@ mes2:	.asciz "Not Found\n"
 main:	la 	t0, target	# int *t0=&target[0]
 	li	a7, 5		# syscall 5 (ReadInt)
 	ecall
-	sw 	a0, 0(t0)	# *t0=a0
 	mv	t0, a0		# t0=a0, t0: input number(target)
 	
 	la	t1, numbers	# int *t1=&numbers[0]
